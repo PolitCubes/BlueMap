@@ -39,8 +39,8 @@ public class MojangSkinProvider implements SkinProvider {
     @Override
     public Optional<BufferedImage> load(UUID playerUUID) throws IOException {
         try {
-            String ebalasDir = "https://politcubes.com/ebalas/";
-            URL ebaloUrl = new URL(ebalasDir + playerUUID);
+            String ebalasDir = "https://politcubes.com/skins/";
+            URL ebaloUrl = new URL(ebalasDir + playerUUID + ".png");
             return Optional.of(ImageIO.read(ebaloUrl));
         }
         catch (IOException ex) {
